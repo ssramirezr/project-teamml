@@ -1,1 +1,11 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/kw1YU2tQ)
+# Final Project - Compilers
+## Names of the group members
+* Laura Ortiz Usme
+* Miguel Ángel Salgar Olarte
+## System Information
+### OS VERSION
+Windows 11 Home Version 23H2
+### Python VERSION
+Python 3.12
+### Tools Used
+Replit to be able to code at the same time remotely

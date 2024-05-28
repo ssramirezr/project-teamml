@@ -1,3 +1,6 @@
+# Ejecutar con python test.py desde el shell
+
+
 def calcular_first(G):
   # Inicializar el conjunto FIRST para cada símbolo no terminal
   first = {key: set() for key in G}
@@ -76,23 +79,26 @@ def calcular_follow(G, first, simboloInicial='S'):
   return follow
 
 def main():
+  listaGramatica = []  # creamos una lista
   numGramaticas = int(input())
   for _ in range(numGramaticas):
     cantReglas = int(input())
     G = {}
-    simboloInicio = 'S'
     for _ in range(cantReglas):
       regla = input().split()
       G[regla[0]] = regla[1:]
 
-    # Calcular los conjuntos FIRST y FOLLOW
-    first = calcular_first(G)
-    follow = calcular_follow(G, first, simboloInicio)
+    listaGramatica.append(G)  # añadir la gramática que acabamos de crear
 
+  for gram in listaGramatica:
+    # Calcular los conjuntos FIRST y FOLLOW
+    first = calcular_first(gram)
+    follow = calcular_follow(gram, first, 'S')
     # Imprimir los conjuntos FIRST y FOLLOW
-    for nonterminal in G:
+    for nonterminal in gram:
       print(f"First({nonterminal}) = {first[nonterminal]}")
       print(f"Follow({nonterminal}) = {follow[nonterminal]}")
+    
 
 if __name__ == "__main__":
   main()
